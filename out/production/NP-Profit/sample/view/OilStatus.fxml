@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.View.OilStatusController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#66cccc" height="105.0" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
+      <TabPane layoutX="67.0" layoutY="155.0" prefHeight="540.0" prefWidth="1106.0">
+         <tabs>
+            <Tab fx:id="oilStatusTab" text="Oil status">
+               <content>
+                  <AnchorPane>
+                     <children>
+                        <TableView fx:id="tableviewOilStatus" maxHeight="-Infinity" prefHeight="439.0" prefWidth="1106.0">
+                          <columns>
+                            <TableColumn fx:id="colTo" prefWidth="103.0" text="To" />
+                            <TableColumn fx:id="colFrom" prefWidth="90.0" text="From" />
+                              <TableColumn fx:id="colPrice" prefWidth="132.0" text="Price" />
+                              <TableColumn fx:id="colBarrels" prefWidth="138.0" text="Barrels" />
+                              <TableColumn fx:id="colStatus" prefWidth="327.0" text="Status" />
+                              <TableColumn fx:id="colDatePurchase" prefWidth="162.0" text="Date of purchase" />
+                              <TableColumn fx:id="colETA" prefWidth="153.0" text="ETA" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="updateTableButton" layoutX="27.0" layoutY="457.0" mnemonicParsing="false" text="Update tabel" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="serviceStationTab" text="ServiceStation">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableViewServiceStation" prefHeight="516.0" prefWidth="1106.0">
+                          <columns>
+                            <TableColumn fx:id="colID" prefWidth="75.0" text="ID" />
+                            <TableColumn fx:id="colCity" prefWidth="258.0" text="City" />
+                              <TableColumn fx:id="colRegion" prefWidth="193.0" text="Region" />
+                              <TableColumn prefWidth="297.0" text="?" />
+                              <TableColumn prefWidth="282.0" text="?" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <ToggleButton fx:id="oilStatusButton" layoutX="106.0" layoutY="50.0" mnemonicParsing="false" onAction="#clickedOilStatus" selected="true" text="Oil Status" />
+      <ToggleButton fx:id="purchaseFromButton" layoutX="583.0" layoutY="50.0" mnemonicParsing="false" onAction="#clickedPurchase" text="Purchase From" />
+      <ToggleButton fx:id="StatisticsButton" layoutX="1077.0" layoutY="50.0" mnemonicParsing="false" onAction="#clickedStatistics" text="Statistics" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.View.StatisticsController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#66cccc" height="105.0" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
+      <TabPane layoutX="41.0" layoutY="128.0" prefHeight="530.0" prefWidth="1228.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="graphTab" text="Graph">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="620.0" prefWidth="1141.0">
+                     <children>
+                        <LineChart fx:id="graph1" prefHeight="476.0" prefWidth="909.0">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                        <ComboBox fx:id="comboxSubject" layoutX="1007.0" layoutY="33.0" prefWidth="150.0" promptText="Subject" />
+                        <ComboBox fx:id="comboxTime" layoutX="1007.0" layoutY="121.0" prefWidth="150.0" promptText="Time" />
+                        <CheckBox fx:id="checkboxCost" layoutX="1008.0" layoutY="271.0" mnemonicParsing="false" text="Cost per litre" />
+                        <CheckBox fx:id="checkboxLitresSold" layoutX="1008.0" layoutY="295.0" mnemonicParsing="false" text="Litres Sold" />
+                        <CheckBox fx:id="checkboxPrice" layoutX="1008.0" layoutY="318.0" mnemonicParsing="false" text="Price" />
+                        <CheckBox fx:id="checkboxTotalRevnue" layoutX="1008.0" layoutY="340.0" mnemonicParsing="false" text="Total Revenue(DKR)" />
+                        <ComboBox fx:id="comboxAllTime" layoutX="1007.0" layoutY="213.0" prefWidth="150.0" promptText="All ServiceStation" />
+                        <ComboBox fx:id="comboxCity" layoutX="1007.0" layoutY="166.0" prefWidth="150.0" promptText="City" />
+                        <Line endX="50.0" layoutX="1108.0" layoutY="83.0" startX="-100.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tableTab" text="Table">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableviewTable" layoutX="6.0" layoutY="6.0" prefHeight="487.0" prefWidth="731.0">
+                          <columns>
+                            <TableColumn fx:id="colDate" prefWidth="194.0" text="Date" />
+                            <TableColumn fx:id="colPrice" minWidth="0.0" prefWidth="110.0" text="Price" />
+                              <TableColumn fx:id="colBarrels" prefWidth="126.0" text="Number Of Barrels " />
+                              <TableColumn fx:id="colTransportCost" prefWidth="163.0" text="Transport Cost" />
+                              <TableColumn fx:id="colCurrency" prefWidth="137.0" text="Currency" />
+                          </columns>
+                        </TableView>
+                        <Line endX="50.0" layoutX="955.0" layoutY="64.0" startX="-100.0" />
+                        <ComboBox fx:id="combox2" layoutX="854.0" layoutY="93.0" prefWidth="150.0" promptText="Time" />
+                        <ComboBox fx:id="combox1" layoutX="854.0" layoutY="14.0" prefWidth="150.0" promptText="Subject" />
+                        <Label layoutX="854.0" layoutY="134.0" text="Placeof purchase" />
+                        <RadioButton fx:id="radioButtonShip" layoutX="854.0" layoutY="151.0" mnemonicParsing="false" text="Ship" />
+                        <RadioButton fx:id="radioButtonRotterdam" layoutX="944.0" layoutY="151.0" mnemonicParsing="false" text="Rotterdam" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <ToggleButton fx:id="StatisticsButton" layoutX="1077.0" layoutY="50.0" mnemonicParsing="false" onAction="#clickedStatistics" selected="true" text="Statistics" />
+      <ToggleButton fx:id="purchaseFromButton" layoutX="583.0" layoutY="50.0" mnemonicParsing="false" onAction="#clickedPurchase" text="Purchase From" />
+      <ToggleButton fx:id="oilStatusButton" layoutX="106.0" layoutY="50.0" mnemonicParsing="false" onAction="#clickedOilStatus" text="Oil Status" />
+   </children>
+</AnchorPane>

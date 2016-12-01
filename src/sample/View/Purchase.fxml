@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.View.PurchaseController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#66cccc" height="105.0" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
+      <Line endX="1000.0" layoutX="151.0" layoutY="174.0" startX="-100.0" />
+      <Label fx:id="labelPrice" layoutX="51.0" layoutY="149.0" text="Price" />
+      <TextField fx:id="textfieldAmountOfBarrles" layoutX="86.0" layoutY="215.0" />
+      <TextField fx:id="textFieldPircePerBarrels" layoutX="395.0" layoutY="215.0" />
+      <TextField fx:id="textFieldCurrency" layoutX="86.0" layoutY="345.0" promptText="currency" />
+      <Label fx:id="labelOilAmount" layoutX="86.0" layoutY="192.0" text="Oil amount:" />
+      <Label fx:id="labelBarrels" layoutX="244.0" layoutY="219.0" prefHeight="17.0" prefWidth="49.0" text="Barrels" />
+      <Label fx:id="labelPricePerBarrels" layoutX="395.0" layoutY="192.0" text="Price per barrels:" />
+      <Label layoutX="86.0" layoutY="264.0" text="Choose currency:" />
+      <RadioButton fx:id="radioButtonEuro" layoutX="88.0" layoutY="290.0" mnemonicParsing="false" text="Euro" />
+      <RadioButton fx:id="radioButtonUSD" layoutX="88.0" layoutY="312.0" mnemonicParsing="false" text="USD" />
+      <Line endX="1000.0" layoutX="152.0" layoutY="437.0" startX="-100.0" />
+      <Label fx:id="labelTransport" layoutX="50.0" layoutY="410.0" text="Transport" />
+      <Label fx:id="labelFrom" layoutX="77.0" layoutY="457.0" text="From:" />
+      <Label fx:id="labelTo" layoutX="204.0" layoutY="457.0" text="To:" />
+      <Label fx:id="labelRefinery" layoutX="552.0" layoutY="451.0" text="Refinery:" />
+      <Label fx:id="labelTransportPrice" layoutX="76.0" layoutY="538.0" text="Transport price: " />
+      <RadioButton fx:id="radioButtonRotterdam" layoutX="77.0" layoutY="474.0" mnemonicParsing="false" text="Rotterdam" />
+      <RadioButton fx:id="radioButtonShip" layoutX="77.0" layoutY="499.0" mnemonicParsing="false" text="Ship" />
+      <RadioButton fx:id="radioButtonFredericia" layoutX="204.0" layoutY="499.0" mnemonicParsing="false" text="Fredericia" />
+      <RadioButton fx:id="radioButtonCopenhagen" layoutX="204.0" layoutY="474.0" mnemonicParsing="false" text="Copenhagen" />
+      <ProgressBar fx:id="progressBarCPH" layoutX="552.0" layoutY="477.0" prefWidth="200.0" progress="0.0" />
+      <ProgressBar fx:id="progressBarFred" layoutX="552.0" layoutY="502.0" prefWidth="200.0" progress="0.0" />
+      <TextField fx:id="textFieldTransportPrice" layoutX="74.0" layoutY="559.0" />
+      <Line endX="1000.0" layoutX="152.0" layoutY="639.0" startX="-100.0" />
+      <Label fx:id="labelFinalPrice" layoutX="48.0" layoutY="611.0" text="Final price for oil:" />
+      <Label fx:id="labelFinalCost" layoutX="74.0" layoutY="661.0" text="Final Cost" />
+      <TextField fx:id="textFieldFinalCost" layoutX="74.0" layoutY="684.0" />
+      <Button fx:id="buyButton" layoutX="1099.0" layoutY="731.0" mnemonicParsing="false" text="Buy" />
+      <Button fx:id="cancelButton" layoutX="863.0" layoutY="731.0" mnemonicParsing="false" text="Cancel" />
+      <ToggleButton fx:id="StatisticsButton" layoutX="1077.0" layoutY="50.0" mnemonicParsing="false" onAction="#clickedStatistics" text="Statistics" />
+      <ToggleButton fx:id="purchaseFromButton" layoutX="583.0" layoutY="50.0" mnemonicParsing="false" onAction="#clickedPurchase" selected="true" text="Purchase From" />
+      <ToggleButton fx:id="oilStatusButton" layoutX="106.0" layoutY="50.0" mnemonicParsing="false" onAction="#clickedOilStatus" text="Oil Status" />
+   </children>
+</AnchorPane>
